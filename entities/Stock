@@ -1,0 +1,48 @@
+{
+  "name": "Stock",
+  "type": "object",
+  "properties": {
+    "ticker": {
+      "type": "string",
+      "description": "Stock ticker symbol (e.g., AAPL)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "shares": {
+      "type": "number",
+      "description": "Number of shares owned"
+    },
+    "buy_price": {
+      "type": "number",
+      "description": "Average price per share when bought"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current market price per share"
+    },
+    "sector": {
+      "type": "string",
+      "enum": [
+        "Technology",
+        "Healthcare",
+        "Finance",
+        "Energy",
+        "Consumer",
+        "Industrial",
+        "Real Estate",
+        "Utilities",
+        "Other"
+      ],
+      "description": "Stock sector"
+    }
+  },
+  "required": [
+    "ticker",
+    "name",
+    "shares",
+    "buy_price",
+    "current_price"
+  ]
+}
